@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+    <script>
+        $(document).ready(function() {
+            $("img").click(function() {
+                $(this).hide();
+
+            });
+
+            $(".ac").click(function() {
+                $("img").show();
+            });
+
+        });
+    </script>
+
+    <style>
+        img {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            padding: 5px;
+        }
+        
+        .ac {
+            position: relative;
+            left: 400px;
+            background-color: rgb(208, 255, 0);
+            color: rgb(62, 29, 209);
+            padding: 10px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="panel">
+        <img class="perrito" src="ninja.jpg" alt="cliente_servidor">
+        <img class="perrito" src="ninja.jpg" alt="cliente_servidor">
+        <img class="perrito" src="ninja.jpg" alt="cliente_servidor">
+        <img class="perrito" src="ninja.jpg" alt="cliente_servidor"> <br>
+        <img class="perrito" src="ninja.jpg" alt="cliente_servidor">
+        <img class="perrito" src="ninja.jpg" alt="cliente_servidor">
+        <img class="perrito" src="ninja.jpg" alt="cliente_servidor">
+        <img class="perrito" src="ninja.jpg" alt="cliente_servidor">
+
+
+
+    </div>
+
+    <input class="ac" type="button" id="AddClass" value="Restaurar ">
+
+</body>
+
+
+
+</html>

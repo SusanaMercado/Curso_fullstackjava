@@ -1,0 +1,43 @@
+
+#general{
+    width:700px;
+    height: 500px;
+    background-color:rgb(27, 27, 25);
+    padding: 40px;
+}
+
+.bloque_azul{
+    width:30px;
+    height: 30px;
+    background-color:blue;
+    display: inline-block;
+    
+
+}
+
+
+.moneda{
+    width:30px;
+    height: 30px;
+    display: inline-block;
+    background: url("moneda.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color:rgb(116, 4, 116);
+}
+
+.pacman{
+    width:30px;
+    height: 30px;
+    background: url("Pacman-img.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    background-color:rgb(116, 4, 116);
+    
+}
+
+
+

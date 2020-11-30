@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+    <script>
+    $(document).ready(function(){
+    $("p").click(function(){
+    $(this).hide();//oculta un texto en especifico
+    });
+
+    $(".ac").click(function(){
+    alert("¡Me hicieron Clic!");//alerta de clic en el boton
+  });
+
+    
+   
+
+///Si los elementos se han deslizado hacia abajo, slideToggle()los deslizará hacia arriba y viceversa si es lo contrario.
+// alterna entre los métodos slideDown()y slideUp().
+
+    $("#flip").click(function(){
+    $("#panel").slideToggle();
+    });
+
+
+// Desliza los elementos hacia arriba
+  $(".flip").click(function(){
+    $(".panel").slideUp("slow");
+  });
+
+
+//El prepend()método jQuery inserta contenido AL COMIENZO de los elementos HTML seleccionados.
+//al hacer clic en e boto, se agrega texto al final
+$("#btn1").click(function(){
+    $(".texto_append").append(" <b>Appended text</b>.");
+  });
+
+  $("#btn2").click(function(){
+    $("ol").append("<li>Appended item</li>");
+  });
+
+//El after()método jQuery inserta contenido DESPUÉS de los elementos HTML seleccionados.
+
+//El before()método jQuery inserta contenido ANTES de los elementos HTML seleccionados.
+
+});
+
+
+    </script>
+
+
+</head>
+
+
+
+
+<body>
+
+    <div class="flip">Click to slide down panel</div>
+    <div class="panel">Esta es la funcion slideUp!</div>
+
+    
+
+<style> 
+    .panel, .flip {
+      padding: 5px;
+      text-align: center;
+      color: #d2d2dd;
+      background-color: #8b998a;
+      border: solid 1px #d2d2dd;
+    }
+    
+    #panel {
+      padding: 50px;
+      display: none;
+    }
+    </style>
+
+
+    <h1 class="titulo1">  AddClass </h1>
+    <p class="texto_aclase"> Click en el boton addClass  </p>
+
+    
+    <input class="ac" type="button" id="AddClass" value="AddClass ">
+    
+
+
+    <p class="texto_aclase2">__________________________________________________________________________________________________________________________________________</p>                            
+
+
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel"><img class="perrito" src="img_perrito.jpg" alt="cliente_servidor" width="100" height="100"> </div>
+
+    <style> 
+    #panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+    }
+    
+    #panel {
+    padding: 50px;
+    display: none;
+    }
+    </style>
+
+<h1 class="titulo2">Slidetoggle </h1>
+<p class="texto_Slidetoggle"> Click en el boton Slidetoggle  </p>
+<input class="ac"  type="button" id="AddClass" value="Slidetoggle ">
+    <p class="texto_Slidetoggle2">__________________________________________________________________________________________________________________________________________</p> 
+    
+    
+    <h1 class="titulo3">Append </h1>
+
+    <p class="texto_append">This is a paragraph.</p>
+    <p class="texto_append ">This is another paragraph.</p>
+    
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        </ol>
+    
+    <button id="btn1">Append text</button>
+    <button id="btn2">Append list items</button>
+    
+
+
+    <p class="texto_Append2">__________________________________________________________________________________________________________________________________________</p> 
+    
+
+
+
+    
+</body>
+</html>

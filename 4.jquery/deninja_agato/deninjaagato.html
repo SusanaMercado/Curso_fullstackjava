@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Ninja a Gato </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() { //attr te devuelve un valor deseado.
+            $("img").click(function() {
+                console.log('data-alt-src value is', $(this).attr('data-alt-src')); // this hace referencia a que imagen hice clic
+                var ruta2 = $(this).attr('data-alt-src'); //en la variable guardamos this que especiica que al hacerle clicl a la imagen especifica  me muestre data-alt-src(ose  el gato) 
+                $(this).attr('src', ruta2); // vuelvo a usar.attr para decirle que al presiona img (src) aparesca mi variable que el data-alt-src
+
+            });
+        });
+    </script>
+
+    <style>
+        #contenedor {
+            width: 700px;
+            height: 600px;
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(212, 106, 35);
+        }
+        
+        img {
+            width: 200px;
+            height: 50px;
+        }
+        
+        h1 {
+            color: cornsilk;
+        }
+        
+        p {
+            color: rgb(248, 240, 240);
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!--data-alt-src, atributo reado por mi mas ruta -->
+    <div id="contenedor">
+        <h1>Rompecabezas</h1>
+        <p>¡Haz click sobre la imagen para armar el rompecabezas.!</p>
+        <img src="img/ninja0.png" data-alt-src="img/cat0.png" alt="primera pieza"> <br>
+        <img src="img/ninja1.png" data-alt-src="img/cat1.png" alt="segunda pieza"> <br>
+        <img src="img/ninja2.png" data-alt-src="img/cat2.png" alt="tercera pieza"> <br>
+        <img src="img/ninja3.png" data-alt-src="img/cat3.png" alt="cuarta pieza"> <br>
+        <img src="img/ninja4.png" data-alt-src="img/cat4.png" alt="quinta pieza">
+    </div>
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Clima</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('form').submit(function() {
+                //en primer lugar coloco al API, luego le concateno el ID de ciudad con signo $ de jquery, ademas agrego .val() para decirle que extraiga de un formulario
+                //luego sigue la clave de la Api despues del =
+                url = "http://api.openweathermap.org/data/2.5/weather?q=" + $("#ciudad").val() + "&cnt={cnt}&appid=0a11faffd5353d5ff084f8afaca8813d"
+                console.log(url);
+                //.val():valida un formulario y extrae la informaion // ++ concatena
+                //span:etiquet que me sirve para colocar en linea un parrafo y separalos de otro texto
+                $.get(url, function(res) {
+                    $(".Ciudad").html("<h2>Ciudad:<br>" + res.name + "</h2>");
+                    $(".Temperatura").html("<h2>Temperatura:<br>" + res.main.temp + "</h2>");
+                    $(".Coordenadas").html("<h2>Coordenadas:<br>Longitud:" + res.coord.lon + "");
+                }, "json");
+                return false;
+            });
+        });
+    </script>
+
+    <style>
+        h1 {
+            font-size: 40px;
+            color: rgb(198, 230, 18);
+            text-align: center;
+        }
+        
+        h2 {
+            color: rgb(226, 212, 17);
+            position: relative;
+            left: 100px;
+        }
+        
+        form {
+            text-align: center;
+            color: rgb(233, 211, 13);
+        }
+        
+        #conteiner {
+            padding: 0px;
+            background-color: royalblue;
+            width: 500px;
+            height: auto;
+            padding: 100px;
+        }
+        
+        img {
+            width: 300px;
+            height: 200px;
+            background-color: royalblue;
+            position: relative;
+            left: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="conteiner">
+
+        <h1> Pronostico del tiempo</h1> <br>
+        <img src="clima.jpg" alt=""> <br><br>
+        <form>
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad">
+            <input type="submit" value="consultar">
+        </form>
+
+        <h2 class="Ciudad"> Ciudad: </h2>
+        <h2 class="Temperatura">Temperatura:</h2>
+        <h2 class=" Coordenadas"> Coordenadas: </h2>
+
+
+    </div>
+</body>
+
+</html>
